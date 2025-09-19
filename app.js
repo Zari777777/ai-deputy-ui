@@ -25,7 +25,7 @@ async function sendQuestion() {
     // Если сервер вернул ошибку — покажем её текст
     if (!res.ok) {
       const text = await res.text().catch(() => "");
-      ansDiv.textContent = 'Ошибка сервера (${res.status}). ${text || "Попробуйте позже."}';
+      ansDiv.textContent = `Ошибка сервера (${res.status}). ${text || "Попробуйте позже."}`;
       return;
     }
 
